@@ -1,6 +1,5 @@
 package org.example;
 
-import java.sql.Time;
 import java.util.Arrays;
 import java.util.List;
 
@@ -11,16 +10,16 @@ public class parallelStream {
 
     // 순차 처리 방식
     List<Apple> heavyApples1 = inventory.stream()
-        .filter(apple -> apple.getWeight() > 10)
-        .collect(toList());
+            .filter(apple -> apple.getWeight() > 10)
+            .collect(toList());
 
     // 병렬 방식
     List<Apple> heavyApples2 = inventory.parallelStream()
-        .filter((Apple a) -> a.getWeight() > 10)
-        .collect(toList());
+            .filter((Apple a) -> a.getWeight() > 10)
+            .collect(toList());
 
 
-    public static class Apple{
+    public static class Apple {
         private final int weight;
 
         public int getWeight() {
