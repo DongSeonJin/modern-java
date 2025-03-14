@@ -1,4 +1,5 @@
 package org.example.parameterization;
 
-public class Filter {
+public enum Color {
+    RED, GREEN
 }
